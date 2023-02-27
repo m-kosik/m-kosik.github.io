@@ -271,10 +271,13 @@
 
     header { height: 90px; }
 
-    #welcome-section {margin-top: 90px; }
+    #welcome-section {
+      margin-top: 90px; 
+      height: 20vh;
+      padding-bottom: 5vh;}
 
-    h1 {font-size: 1.5rem;}
-    h2 {font-size: 1rem;}
+    h1 {font-size: 3rem;}
+    h2 {font-size: 2rem;}
 
     nav {
       width: 100%;
