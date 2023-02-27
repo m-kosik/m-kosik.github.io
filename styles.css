@@ -36,6 +36,7 @@
     color: var(--light2);
     font-family: Courier, Raleway, sans-serif;
     line-height: 2rem;
+    font-size: 1.4rem;
     }
   
   h1 {
@@ -269,15 +270,13 @@
   
   @media (max-width: 550px) {
 
-    header { height: 90px; }
+    header { height: 120px; }
 
     #welcome-section {
-      margin-top: 90px; 
-      height: 20vh;
-      padding-bottom: 5vh;}
-
-    h1 {font-size: 3rem;}
-    h2 {font-size: 2rem;}
+      margin-top: 150px;
+      min-height: 30vh;
+      max-height: 60vh;
+      padding: 0;}
 
     nav {
       width: 100%;
@@ -299,10 +298,6 @@
       text-align: center;
       }
   
-    nav a {
-      font-size: 1rem;
-    }
-  
     #project-grid {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -312,11 +307,8 @@
       width: 100%; }
 
     #techstack p {
-      font-size: 0.9rem; }
+      font-size: 0.8rem;}
 
-    #techstack ul {
-      font-size: 0.8rem;
-    }
   
   }
   
