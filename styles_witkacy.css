@@ -1,7 +1,8 @@
 
 :root {
     --dark: #131415;
-    --middledark: #243930;
+    --middledark: #1c3e30;
+    --middle: #295c46;
     --highlight: #C02621;
     --dirtyhighlight: #a3564e;
     --light: #d7b556;
@@ -32,25 +33,21 @@ body {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    /* background-image: url('img/bajka-crop.jpg'); */
     background-color: var(--middledark);
     width: 95%;
     margin: 1% auto;
-    height: 20vh;
+    height: 15vh;
     border: 2px solid white;
     justify-content: center;
     align-items: center;
+    font-size: 2vw;
 }
 
 #top-bar:hover {
     display: flex;
     flex-wrap: wrap;
-    /* background-image: url('img/bajka-crop.jpg'); */
     background-color: var(--middledark);
-    width: 95%;
-    height: 20vh;
-    margin: 1% auto;
-    border: 2px var(--dirtyhighlight) solid;
+    filter: brightness(1.2);
     align-items: unset;
 }
 
@@ -61,8 +58,9 @@ body {
     width: 0%;
     height: 0px;
     opacity: 0; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--light);
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: normal;
     letter-spacing: 5px;
     text-align: center;
@@ -79,17 +77,13 @@ body {
     
     background-color: var(--dark);
     color: var(--verylight);
-
     width: 100%;
-    height: 40%;
-    
+    height: 60%;
     margin: auto auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2vw;
     font-weight: bold;
     letter-spacing: 5px;
     border-style: solid none;
@@ -102,12 +96,11 @@ body {
     min-height: 40px;
     max-height: 100px;
     border-width: 4px;
-    font-size: 3vh;
+    font-size: 2.6vw;
     text-align: center;
     font-weight: bold;
     letter-spacing: 5px;
 }
-
 
 #main-gallery {
     display: flex;
@@ -207,21 +200,25 @@ footer a:hover {
 .gallery-element {
     display: flex;
     width: 100%;
-    height: 20vh;
+    height: 25vh;
 }
 
 .gallery-element:hover {
     display: flex;
     width: 100%;
-    height: 20vh;
+    height: 25vh;
 }
 
-.black-panel {   
-    font-size: 3vw;
+#top-bar { 
+    font-size: 5vw;
+    height: 25vw;
+    text-align: center;
 }
 
-#top-bar .caption { 
-    font-size: 2.5vw;
+#main-gallery > a > div{
+    height: 50%;
+    font-size: 8vw;
+
 }
 
 
