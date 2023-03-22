@@ -1,7 +1,8 @@
 :root {
-    --dark1: #141f38;
+    --dark1: #050e24;
     --middle1: #203B5A;
     --dark2: #091b5e;
+
     --light1: #ff7e2e;
     --light2: #b8ffd8;
     --superlight: #ffffff;
@@ -17,14 +18,15 @@
   }
   
   html {
-    background: linear-gradient(0deg, var(--dark2), var(--dark1) 50%);
+    background: linear-gradient(0deg, var(--dark2), var(--dark1) 40%);
     background-attachment: fixed;
   }
   
   #welcome-section {
-    margin-top: 120px;
+    margin: 120px auto 0px auto;
     height: 90vh;
     width: 100%;
+    max-width: 1080px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -49,7 +51,7 @@
     font-family: Courier, monospace;
     text-align: left;
     margin: auto auto;
-    font-size: 22vh;
+    font-size: 20vh;
     font-weight: 800;
     letter-spacing: 1px;
     z-index: 0;
@@ -60,7 +62,7 @@
     font-family: Courier, monospace;
     text-align: right;
     margin: auto auto;
-    font-size: 10vh;
+    font-size: 9vh;
     font-weight: 800;
     letter-spacing: 1px;
     z-index: 0;
@@ -215,7 +217,7 @@
     #techstack {
         margin-top: 20vh;
         padding: 20px;
-        font-size: 18px;
+        font-size: 16px;
     }
     
     #techstack_header {
@@ -225,7 +227,7 @@
     }
     
     .skills-grid {
-        width: 60%;
+        width: 80%;
         margin: 0 auto 0 auto;
         margin-top: 3rem;
         display: grid;
@@ -237,7 +239,7 @@
 
     #techstack ul {
         display: flex;
-        margin-top: 10px;
+        margin-top: 0px;
         line-height: 1.6em;
         flex-wrap: wrap; 
         list-style: none;
@@ -270,12 +272,11 @@
     #techstack p {
         font-family: Courier, Raleway, sans-serif;
         font-weight: 600;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 1.5;
-        
         padding: 0;
         color: var(--superlight);
-        margin-top: 10px;
+        margin-top: 0px;
         text-align: right;
         vertical-align: middle;
         grid-column: 1;
@@ -357,11 +358,18 @@
     #project-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+
+    h1 { font-size: 15vh; }
+    h2 { font-size: 8vh; }
     
     .skills-grid {
         width: 80%;
     }
     
+    #welcome-section p {
+      font-size: 2.5vw;
+      }
+
   }
   
   
