@@ -24,7 +24,7 @@
   
   #welcome-section {
     margin: 120px auto 0px auto;
-    height: 90vh;
+    min-height: 80vh;
     width: 100%;
     max-width: 1080px;
     display: flex;
@@ -358,16 +358,21 @@
     #project-grid {
       grid-template-columns: repeat(2, 1fr);
     }
+    
+    #welcome-section {
+      min-height: 50vh; 
+      max-height: none;
+    }
 
-    h1 { font-size: 15vh; }
-    h2 { font-size: 8vh; }
+    h1 { font-size: calc(4vw + 8vh); }
+    h2 { font-size: calc(3vw + 7vh); }
     
     .skills-grid {
         width: 80%;
     }
     
     #welcome-section p {
-      font-size: 2.5vw;
+      font-size: calc(1vw + 1.2vh);
       }
 
   }
@@ -378,20 +383,20 @@
   @media (max-width: 540px) {
 
     header { height: 120px; }
-    h1 { font-size: 15vh; }
-    h2 { font-size: 8vh; }
+    h1 { font-size: calc(10px + 2vw + 4vh); }
+    h2 { font-size: calc(10px + 1.5vw + 4vh); }
     
     #welcome-section {
+      min-height: 30vh; 
+      max-height: none;
       margin-top: 150px;
-      min-height: 30vh;
-      max-height: 90vh;
       padding: 0;}
       
     #welcome-section p {
     color: var(--light2);
     font-family: Courier, monospace;
     line-height: 2rem;
-    font-size: 1.2rem;
+    font-size: calc(1vw + 1.2vh);
     margin-top: 10vh;
     }
 
