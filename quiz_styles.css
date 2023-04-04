@@ -1,0 +1,138 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Grenze','Labrada', 'Forum', 'Bona Nova', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: calc(20px + 0.8vw);}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 160;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    --hue: var(--hue-neutral);
+    background-color: hsl(var(--hue), 20%, 10%);
+}
+
+/* body.correct {
+    --hue: var(--hue-correct);
+    background-color: hsl(var(--hue), 30%, 15%);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+    background-color: hsl(var(--hue), 30%, 15%);
+} */
+
+.container {
+    width: 800px;
+    max-width: 90%;
+    background-color: rgb(255,255,255,0.9);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 10%, 50%);
+    border-radius: 5px;
+    height: 24vh;
+    padding: 15px 10px;
+    color: black;
+    font-size: calc(18px + 0.6vw);
+    /* font-weight: bold; */
+    outline: none;
+    background-color: hsl(var(--hue), 10%, 98%);
+}
+
+.btn:hover {
+    border-color: black;
+    background-color: hsl(var(--hue), 30%, 75%);
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+    background-color: hsl(var(--hue), 40%, 65%);
+    color: black;
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+    background-color:  hsl(var(--hue), 40%, 65%);;
+}
+
+.start-btn, .next-btn, .show-result-btn {
+display: flex;
+align-items:center;
+justify-content: center;
+    font-weight: 500;
+    padding: 0px 20px;
+    height: 12vh;
+    font-size: calc(15px + 1vw);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+    
+}
+
+.transparent {
+    opacity: 0;
+}
+
+
+#question-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 12vh;
+}
+
+#question {
+text-align: center;
+}
+
+.selected-answer {
+    border: 3px solid black;
+}
+
+#result p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 720px) {
+
+   *, *::before, *::after {
+    font-size: calc(14px + 1vw + 0.6vh);}
+	    
+  .btn {
+    height: 30vh;
+    font-size: calc(8px + 1.4vw + 0.6vh);}
+    
+  .start-btn, .next-btn, .show-result-btn {
+    height: 12vh;
+}
+}
