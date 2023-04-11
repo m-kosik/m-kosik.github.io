@@ -10,7 +10,14 @@
     <script defer src="quiz_script.js"></script>
   </head>
   <body>
+
     <div class="container">
+      <div id="progress" class="hide">
+        <p id="progress-text">Pytanie</p>
+        <!-- <div id="progress-bar">
+          <div id="progress-bar-full"></div>
+        </div> -->
+      </div>
         <div id="question-container" class="hide">
             <div id="question-wrapper"><div id="question">Question</div></div>
             <div id="answer-buttons" class="btn-grid">
@@ -21,7 +28,7 @@
             </div>
         </div>
         <div id="result" class="hide">
-            <p>Twój wynik to: </p>
+            <p id="result-text">Twój wynik to: </p>
         </div>
         <div class="controls">
             <button id="start-btn" class="start-btn btn">Start</button>
@@ -29,5 +36,9 @@
             <button id="show-result-btn" class="show-result-btn btn hide">Pokaż wynik</button>
         </div>
     </div>
+    
+    <footer>
+    Created by <a href="https://m-kosik.github.io">miriam</a>. Background from <a href="https://wallpaper-mania.com/post/wallpaper-id-777000188808/">Wallpaper-Mania</a>.
+    </footer>
   </body>
 </html>
