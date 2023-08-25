@@ -125,6 +125,33 @@ function clearStatusClass(element) {
 
 questions = [
     {
+        question: "Jaki kolor oczu miała Yennefer?",
+        answers: [
+            { text: "fiołkowy", correct: true }, 
+            { text: "szmaragdowy", correct: false }, 
+            { text: "kasztanowy", correct: false }, 
+            { text: "szafirowy", correct: false }, 
+        ]
+    },
+    {
+        question: "Jak nazywały się wszystkie konie Geralta?",
+        answers: [
+            { text: "Skoczka", correct: false }, 
+            { text: "Płotka", correct: true }, 
+            { text: "Pegaz", correct: false }, 
+            { text: "Kelpie", correct: false }, 
+        ]
+    },
+    {
+        question: "Jak nazywa się niewielka rzeczka stanowiąca naturalną granicę świętego lasu driad, Brokilonu?",
+        answers: [
+            { text: "Jaruga", correct: false }, 
+            { text: "Tamiza", correct: false }, 
+            { text: "Wstążka", correct: true }, 
+            { text: "Pontar", correct: false }, 
+        ]
+    },
+    {
         question: "Dlaczego (według książki) wiedźmini noszą ze sobą dwa miecze?",
         answers: [
             { text: "Na niektóre potwory działa tylko srebrne ostrze, na inne jedynie żelazo", correct: true }, 
@@ -152,30 +179,39 @@ questions = [
         ]
     },
     {
-        question: "Jaki kolor oczu miała Yennefer?",
+        question: "Która z wymienionych postaci nie należała do bandy Szczurów?",
         answers: [
-            { text: "fiołkowy", correct: true }, 
-            { text: "szmaragdowy", correct: false }, 
-            { text: "kasztanowy", correct: false }, 
-            { text: "szafirowy", correct: false }, 
+            { text: "Iskra", correct: false }, 
+            { text: "Kayleigh", correct: false }, 
+            { text: "Bonhart", correct: true }, 
+            { text: "Mistle", correct: false }, 
         ]
     },
     {
-        question: "Jak nazywały się wszystkie konie Geralta?",
+        question: "Z czego była wykonana statuetka, w którą Francesca spakowała Yennefer poczas walk na wyspie Thanedd?",
         answers: [
-            { text: "Skoczka", correct: false }, 
-            { text: "Płotka", correct: true }, 
-            { text: "Pegaz", correct: false }, 
-            { text: "Kelpie", correct: false }, 
+            { text: "z jadeitu", correct: false }, 
+            { text: "z nefrytu", correct: true }, 
+            { text: "z agatu", correct: false }, 
+            { text: "z diamentu", correct: false }, 
         ]
     },
     {
-        question: "Jak nazywa się niewielka rzeczka stanowiąca naturalną granicę świętego lasu driad, Brokilonu?",
+        question: "Co wypadło z książki, którą zaczęła przeglądać Ciri podczas rozmowy z Jarre?",
         answers: [
-            { text: "Jaruga", correct: false }, 
-            { text: "Tamiza", correct: false }, 
-            { text: "Wstążka", correct: true }, 
-            { text: "Pontar", correct: false }, 
+            { text: "zakazane w świątyni Melitele karty do gwinta", correct: false }, 
+            { text: "listy zawierające informacje na temat Geralta", correct: false }, 
+            { text: "sprośny obrazek przedstawiający nagą parę", correct: true }, 
+            { text: "pamiętnik, w którym chłopak pisał o swoim skrywanym uczuciu do Ciri", correct: false }, 
+        ]
+    },
+    {
+        question: "Jak nazywał się wykładowca historii naturalnej w Akademii Oxenfurckiej, który podróżował z Geraltem łodzią i chciał na jego cześć nazwać żagnicę mianem “Geraltia maxiliosa pitti”?",
+        answers: [
+            { text: "Linus Pitt", correct: true }, 
+            { text: "Albert Depp", correct: false }, 
+            { text: "Joachim Hanks", correct: false }, 
+            { text: "Everett Clooney", correct: false }, 
         ]
     }
 ];
