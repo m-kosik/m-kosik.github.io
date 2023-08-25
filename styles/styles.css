@@ -146,7 +146,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     font-family: var(--basic-font), Courier, monospace;
 }
 
@@ -177,11 +177,17 @@
   
   /* SMALL SCREENS */
   
-  @media (max-width: 540px) {
+  @media (max-width: 600px) {
 
     h1 { font-size: 3vw; }
   
+  footer > p {
+    font-size: 14px;
   }
     
-  
+  footer .fab, footer .fa {
+    font-size: 18px;
+    padding: 0 12px;
+  }
+  }
 
