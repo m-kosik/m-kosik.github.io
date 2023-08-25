@@ -50,13 +50,13 @@
 
   h1 {
     color: var(--superlight);
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
 
   main {
-    margin: 0px auto 0px auto;
-    min-height: 90vh;
+    margin: 100px auto 0px auto;
+    min-height: 60vh;
     width: 100%;
     max-width: 1080px;
     display: flex;
@@ -174,138 +174,14 @@
     padding: 0 15px;
   }
 
-
-  
-  /* MEDIUM SCREENS */
-  
-  @media (max-width: 840px) {
-    
-    #project-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    #welcome-section {
-      min-height: 50vh; 
-      max-height: none;
-    }
-
-    h1 { font-size: calc(4vw + 8vh); }
-    h2 { font-size: calc(3vw + 7vh); }
-    
-    .skills-grid {
-        width: 80%;
-    }
-    
-    #welcome-section p {
-      font-size: calc(1vw + 1.2vh);
-      }
-
-  }
-  
   
   /* SMALL SCREENS */
   
   @media (max-width: 540px) {
 
-    main {
-      margin: 120px auto 0px auto;
-      min-height: 90vh;
-      width: 100%;
-      max-width: 540px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      padding-bottom: 15vh;
-    }
+    h1 { font-size: 3vw; }
   
-  
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: -1em auto 0 auto;
-    padding: 20px 10px;
-    gap: 16px;
   }
-
-  .recommendation {
-    display: block;
-    border: 2px solid #e0e0d4;
-    width: 94%;
-    padding: 2%;
-    border-radius: 4px;
-  }
-  
-    header { height: 120px; }
-    h1 { font-size: calc(10px + 2vw + 4vh); }
-    h2 { font-size: calc(10px + 1.5vw + 4vh); }
     
-    #welcome-section {
-      min-height: 30vh; 
-      max-height: none;
-      margin-top: 150px;
-      padding: 0;}
-      
-    #welcome-section p {
-    font-size: calc(1vw + 1.2vh);
-    }
-
-    nav {
-      width: 100%;
-    }
   
-    nav > ul {
-      margin: 0px;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-items: center;
-      gap: 5px;
-      padding: 15px;
-    }
-  
-    nav > ul > li {
-      list-style: none;
-      text-align: center;
-      }
-  
-    #project-grid {
-      grid-template-columns: repeat(1, 1fr);
-    }
 
-    #techstack {
-    padding-left: 0px;
-    padding-right: 0px;
-      }
-      
-    .skills-grid {
-        width: 95%;
-        padding-left: 0px;
-        padding-right: 0px;
-        grid-template-columns: 100%;
-        row-gap: 5px;
-        column-gap: 25px;
-    }
-
-    #techstack p {
-      font-size: 0.8rem;}
-      
-    #techstack ul {
-        width: 95%;
-    }
-
-    #techstack li {
-        font-size: 0.8rem;
-      }
-
-    footer > p {
-      font-size: 3vw;
-    }
-
-  
-  }
-  
