@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     --hue: var(--hue-neutral);
-    background-image: url(witcher-bg.jpg);
+    background-image: url(../img/witcher-bg.jpg);
     background-size: cover;
     background-color: hsl(var(--hue), 20%, 10%);
 }
