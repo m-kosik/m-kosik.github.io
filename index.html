@@ -1,51 +1,44 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wiedźmin - quiz</title>
+    <link rel="stylesheet" href="./styles/quiz_styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Labrada&family=Forum&family=Grenze">
+    <script defer src="scripts/quiz_script.js"></script>
+  </head>
+  <body>
 
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Miriam Kosik - personal website</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Philosopher&family=Merriweather+Sans&family=Labrada&family=Changa&family=Merienda">
-  <link rel="stylesheet" href="./styles/styles.css"/>
-  <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      crossorigin="anonymous"
-    />
-  
-</head>
-
-<body>
-  <header>
-    <p><h1>Hello, my name is Miriam - welcome to my personal website!</h1></p>
-  </header>
-
-
-  <main>
-
-    <section class="gallery">
-
-      <div class="block highlight">Here, you can find my CV and some of my free-time projects:</div>
-      
-      <div class="block"><a href="cv_miriam_kosik.pdf" target="_blank">CV</a></div>
-
-      <div class="block"><a href="wiedzmin-quiz.html" target="_blank">Quiz about the Witcher saga (in Polish) </a></div>
-
-      <div class="block"><a href="https://podroze-w-pionie.com" target="_blank"> Travel blog - Podróże w pionie </a></div>
+    <div class="container">
+      <div id="progress" class="hide">
+        <p id="progress-text">Pytanie</p>
+        <!-- <div id="progress-bar">
+          <div id="progress-bar-full"></div>
+        </div> -->
+      </div>
+        <div id="question-container" class="hide">
+            <div id="question-wrapper"><div id="question">Question</div></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div id="result" class="hide">
+            <p id="result-text">Twój wynik to: </p>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Następne pytanie</button>
+            <button id="show-result-btn" class="show-result-btn btn hide">Pokaż wynik</button>
+        </div>
+    </div>
     
-    </section>
-
-  </main>
-
-
-  <footer>
-    <p> <span>Created by <a href="https://linkedin.com/in/miriam-k" target="_blank">miriam</a>.</span><span>2023</span> <span> 
-      <a id="profile-link" href="https://linkedin.com/in/miriam-k" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      
-      <a id="github-link"  href="https://github.com/m-kosik" target="_blank"><i class="fab fa-github"></i></a>
-
-      <a id="e-mail"  
-        href="mailto:&#x6B;&#x6F;&#x73;&#x69;&#x6B;&#x6D;&#x69;&#x72;&#x69;&#x61;&#x6D;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;"  
-        target="_blank"><i class="fa fa-envelope"></i></a></span></p>
-  </footer>
-
-</body>
+    <footer>
+    Created by <a href="https://m-kosik.github.io">miriam</a>. Background from <a href="https://wallpaper-mania.com/post/wallpaper-id-777000188808/">Wallpaper-Mania</a>.
+    </footer>
+  </body>
+</html>
