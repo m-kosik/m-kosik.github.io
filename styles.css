@@ -1,0 +1,552 @@
+@charset "UTF-8";
+
+/* Import ET Book styles
+   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
+
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+    src: url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+    src: url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book-roman-old-style";
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+:root {
+    --middle1: #3ac0c2;
+    --middle2: #4b4034;
+    --middlelight1: #6F1A07;
+    --newlink: #473335;
+    --visitedlink: #6d5d4c;
+    --light2: rgb(223, 223, 211);
+    --verylight: #ffffff;
+    --dark1: #564345;
+    --dark2: hsl(220, 39%, 23%);
+    /* #473335 */
+}
+
+/* All pages */
+html {
+    font-size: 15px;
+    background-image: url("img/davinci.jpeg");
+    background-color:  var(--middle2);
+    background-size: 1600px;
+    background-blend-mode: lighten;
+    background-color: hsl(60, 16%, 85%, 60%);
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    background-color: var(--verylight);
+    color: var(--dark1);
+    max-width: 960px;
+    counter-reset: sidenote-counter;
+    box-sizing: border-box;
+    min-height: 101vh;
+}
+
+header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    z-index: 1;
+  }
+  
+  nav {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5px 0px;
+    border-bottom: 0px solid var(--dark2);
+    line-height: 1;
+    background-color: var(--verylight);
+  }
+  
+  nav > ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+  }
+  
+  nav > ul > li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 350px;
+    text-align: center;
+    line-height: 36px;
+    padding: 4px 0px 0px 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 0.9;
+  }
+
+.top-bar {
+    box-sizing: border-box;
+    line-height: 54px;
+    background-color: var(--dark2);
+    color: #fffff8;
+    width: 100%;
+    max-width: 960px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 5px 0px 5px 0px;
+    margin: 0px auto;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--dark2);
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 0.4rem;
+    margin-bottom: 1.0rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--middlelight1)
+}
+
+h4 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 0px;
+}
+
+.active {
+    color: var(--middle1);
+    font-weight: bold;
+}
+
+h5 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    color: var(--dark2);
+    font-weight: bold;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 95%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+a:link{
+    text-decoration: none;
+    color: var(--newlink);
+    }
+
+a:visited {
+    color: var(--visitedlink);
+}
+
+a:hover, a:active {
+    color: var(--middle1);
+    font-weight: bold;
+}
+
+
+/* MAIN - ABOUT ME PAGE */
+
+main {
+    padding-top: 120px;
+    width: 100%;
+}
+
+.aboutme {
+    display: flex;
+    width: 100%;
+    vertical-align: top;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 1rem;
+}
+
+.aboutme p {
+    margin-top: 15px;
+}
+
+.aboutme_img {
+    padding-top: 10px;
+    display: inline-block;
+    width: 30%;
+    margin: auto;
+}
+
+.aboutme_description {
+    display: inline-block;
+    text-align: left;
+    width: 65%;
+    padding-right: 10%;
+}
+
+.aboutme_description h2 {
+    margin-bottom: 30px;
+}
+
+.aboutme_description p {
+    line-height: 1.5em;
+}
+
+.aboutme_img > img {
+    display: block;
+    width: 60%;
+    aspect-ratio: 0.75;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 3px;
+}
+
+
+/* RESEARCH SUBPAGE */
+
+.research{
+    display: block;
+    border: 0px solid var(--light2);
+    width: 48%;
+    padding: 0px 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.research-item {
+    padding-bottom: 35px;
+}
+
+.research-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    margin: 0 auto;
+    padding: 40px 50px;
+    gap: 16px;
+  }
+
+
+/* TEACHING SUBPAGE */
+
+.teaching{
+    display: block;
+    border: 0px solid var(--light2);
+    width: 48%;
+    padding: 0px 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.teaching p {
+    margin-top: 5px;
+    line-height: 1.5em;
+}
+
+.teaching h5{
+    padding-top: 10px;
+}
+
+.teaching-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    margin: 0 auto;
+    padding: 40px 50px;
+    gap: 16px;
+  }
+
+  * .teaching-list {
+    padding-left: 10px;
+    list-style: inside;
+    list-style-type: square;
+  }
+
+  * .teaching-list > li {
+    padding-bottom: 5px;
+  }
+
+/* PUBLICATION PAGE */
+
+#publication-list {
+    padding: 50px 0 0 0;
+    width: 90%;
+    margin: auto;
+}
+
+#publication-list ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#publication-list li {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+}
+
+.publication-authors {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.publication-details {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.85rem;
+    color: var(--visitedlink);
+    margin-top: 5px;
+}
+
+.publication-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-top: 5px;
+    line-height: 1.2;
+    color: var(--middlelight1);
+}
+
+.publication-title a { color: var(--middlelight1); }
+
+.publication-title a:hover { color: var(--middle1); }
+
+#publication-list p {
+    margin-top: 20px;
+    padding-left: 0px; 
+    width: 80%;
+}
+
+p {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+/* INTERESTS - MUSIC AND CLIMBING */
+
+.black-panel {
+    display: block;
+    color: var(--verylight);
+    width: 100%;
+    height: 20%;
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 5px;
+    border-style: none none solid none;
+    border-color: var(--light);
+    border-width: 2px;
+}
+
+.panel-text {
+    display: block;
+    height: 80%;
+    padding: 10px 5px 5px 5px;
+    font-size: 0.9rem;
+    text-align: left;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#interests-gallery > div > div > p {
+    padding: 5px ;
+}
+
+#interests-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0 0 0;
+    gap: 30px;
+    width: 90%;
+    margin: 2% auto;
+}
+
+.gallery-element {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: top;
+    width: 200px;
+    height: 280px;
+    background-blend-mode: darken;
+    background-color: hsl(220, 39%, 23%, 0.9);
+    border-radius: 3px;
+    gap: 0px;
+}
+
+.gallery-element:hover {
+    background-blend-mode: darken;
+    background-color: var(--dark2);
+}
+
+a { 
+    text-decoration: none; 
+}
+
+.witcher {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--dark2);
+}
+
+/* #first-panel {    background-image: url('img/climbing1.jpg'); }
+#second-panel {    background-image: url('img/ai-keyboards2.png'); }
+#third-panel {    background-image: url('img/bg2.jpg'); } */
+
+#interests-gallery > a { 
+    background-size: cover;
+}
+
+/* FOOTER */
+
+footer > p {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+footer {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    background-color: var(--dark2);
+    color: var(--verylight);
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+}
+
+footer a:hover {
+    color: var(--verylight);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* Style all font awesome icons */
+footer .fa-brands {
+    padding: 0px 5px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+
+  .fa-orcid {
+    color: rgba(166,206,57,255);
+  }
+
+  .fa-researchgate {
+    color: rgba(100,230,205,255);
+  }
+
+  /* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+  }
+
+
+
+
+/* Screens less than 720px */
+@media (max-width: 720px) {
+
+    
+    .teaching{
+        width: 75%;
+        padding-top: 30px;
+    }
+
+    .teaching-gallery {
+        padding: 1%;
+    }
+
+    .research{
+        width: 75%;
+        padding-top: 30px;
+    }
+    
+    .research-gallery {
+        padding: 1%;
+      }
+
+      
+    nav > ul > li {
+        line-height: 1.1rem;
+        padding: 4px 0px 0px 0px;
+      }
+
+    .panel-text {
+        font-size: 12px;
+    }
+
+}

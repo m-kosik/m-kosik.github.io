@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wiedźmin - quiz</title>
+    <link rel="stylesheet" href="quiz_styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Labrada&family=Forum&family=Grenze">
+    <script defer src="quiz_script.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div id="progress" class="hide">
+        <p id="progress-text">Pytanie</p>
+        <!-- <div id="progress-bar">
+          <div id="progress-bar-full"></div>
+        </div> -->
+      </div>
+        <div id="question-container" class="hide">
+            <div id="question-wrapper"><div id="question">Question</div></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+        </div>
+        <div id="result" class="hide">
+            <p id="result-text">Twój wynik to: </p>
+        </div>
+        <div id="start-txt">
+          Witam w wiedźmińskim quizie!
+          <br><br>
+          <b>Uwaga!</b> W quizie obowiązuje wersja wydarzeń z książek. <br>
+          Jeżeli odpowiedź byłaby inna w przypadku gier lub seriali, <br>
+          a inna na podstawie wersji książkowej - wybierz opcję z książki.
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Następne pytanie</button>
+            <button id="show-result-btn" class="show-result-btn btn hide">Pokaż wynik</button>
+        </div>
+    </div>
+    
+    <footer>
+    Created by <a href="https://m-kosik.github.io">miriam</a>. Background from <a href="https://wallpaper-mania.com/post/wallpaper-id-777000188808/">Wallpaper-Mania</a>.
+    </footer>
+  </body>
+</html>

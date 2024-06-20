@@ -1,49 +1,82 @@
 <!DOCTYPE html>
-<html lang="pl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Wiedźmin - quiz</title>
-    <link rel="stylesheet" href="./styles/quiz_styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Labrada&family=Forum&family=Grenze">
-    <script defer src="scripts/quiz_script.js"></script>
-  </head>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Miriam Kosik - personal website</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://kit.fontawesome.com/52c0dbdfec.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta description="Miriam Kosik - personal website">
+</head>
+
   <body>
 
-    <div class="container">
-      <div id="progress" class="hide">
-        <p id="progress-text">Pytanie</p>
-        <!-- <div id="progress-bar">
-          <div id="progress-bar-full"></div>
-        </div> -->
+    <header>
+      <div class="top-bar">
+      - Miriam Kosik -
       </div>
-        <div id="question-container" class="hide">
-            <div id="question-wrapper"><div id="question">Question</div></div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+      <nav id="navbar">
+        <ul>
+          <li><h4 class="active"><a href='index.html'>Main</a></h4></li>
+          <li><h4><a href='research.html'>Scientific interests</a></h4></li>
+          <li><h4><a href='teaching.html'>Teaching</a></h4></li>
+          <li><h4><a href='interests.html'>Hobbies</a></h4></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <section>
+          <div class="aboutme">
+
+            <div class="aboutme_img">
+              <img src="img/miriam_kosik.jpg" alt="Photo of Miriam Kosik"/>
             </div>
-        </div>
-        <div id="result" class="hide">
-            <p id="result-text">Twój wynik to: </p>
-        </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" class="next-btn btn hide">Następne pytanie</button>
-            <button id="show-result-btn" class="show-result-btn btn hide">Pokaż wynik</button>
-        </div>
-    </div>
-    
+            
+            <div class="aboutme_description">
+              <h2> Hello, my name is Miriam. </h2>
+              
+              <p>
+                I am a physicist specialized in quantum optics, quantum computing and quantum information. <br>
+                Currently (starting in February 2024), I work part-time as a teaching assistant at the 
+                <a href="https://wmi.amu.edu.pl/en">Faculty of Mathematics and Computer Science</a> 
+                at the Adam Mickiewicz University in Poznan, Poland. I also hold an R&D position in the industry
+                (which is my primary place of work) in a project related to Quantum Key Distribution. 
+                There, I am responsible for research and implementation of the classical post-processing QKD phase -
+                mostly error correction with LDPC codes.</p>
+              <p> The topic od my PhD research was modelling graphene nanostructures and their interaction 
+                with light on a quantum level. 
+                After finishing my PhD, I decided that I want to continue my research more into the direction of 
+                classical and quantum information theory, and I am now trying to evolve in this direction. </p>
+              <p> Since quantum science right now is mostly a hobby for me, 
+                I tend to just look for various problem that catch my interest. 
+                I have always been very interested in diving deeper into the theory of relativity, 
+                quantum field theory and their potential connections. However, lifetime is limited so 
+                let's see whether someday I will have enough time and mental power to do that. </p>
+              <p> My other hobbies include sport climbing and playing all sort of games. 
+                I like classical literature, I love to sing and play a bit of the piano and ukulele. </p>
+            </div>
+
+          </div>
+      </section>
+    </main>
+
     <footer>
-    Created by <a href="https://linkedin.com/in/miriam-k" target="_blank">miriam</a> 
-    (<a id="github-link"  href="https://github.com/m-kosik" target="_blank">GitHub</i></a>). 
-    Background from <a href="https://wallpaper-mania.com/post/wallpaper-id-777000188808/">Wallpaper-Mania</a>.
-    
-
+      <p> 
+        <span>Created by <a href="https://www.linkedin.com/in/miriam-k/" target="_blank">miriam</a>.</span>
+        <span>Poland - 2024</span> 
+        <span> 
+          <a href="https://www.researchgate.net/profile/Miriam-Kosik" target="_blank">
+            <span class="fa-brands fa-researchgate"></span>
+          </a>
+          <a href="https://orcid.org/my-orcid?orcid=0000-0002-3660-2199" target="_blank">
+            <span class="fa-brands fa-orcid"></span>
+          </a>
+        </span>
+      </p>
     </footer>
-
+    
   </body>
 </html>
